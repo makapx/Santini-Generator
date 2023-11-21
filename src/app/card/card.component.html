@@ -1,0 +1,47 @@
+<div class="flex w-full gap-2">
+    <div  class="p-2 flex flex-col gap-2 w-fit bg-gray-100 rounded-md shadow-sm">
+        <button class="btn btn-primary btn-sm"
+            (click)="toggleActive()"
+            [ngClass]="{'btn-primary': isActive, 'btn-error': !isActive}"
+        >
+            <i class='bx text-lg text-white'
+                [ngClass]="{'bxs-hide': isActive, 'bxs-show': !isActive}"
+            ></i>
+        </button>
+        <ng-container *ngIf="selectedLogo">
+            <button class="btn btn-error btn-sm" (click)="selectedLogo = null">
+                <i class='bx bxs-trash-alt text-white text-lg' ></i>
+            </button>
+            <ng-container *ngTemplateOutlet="chooseLogoModal"></ng-container>
+        </ng-container>
+    </div>
+    <div class="flex gap-1 p-4 bg-senatoAccademico items-center justify-center"
+        [ngClass]="{'bg-gray-100': !isActive}"
+    >
+        <ng-container *ngIf="selectedLogo; else noLogo">
+            <img [src]="selectedLogo.path" class="w-20 h-20 md:w-28 md:h-28 rounded-full mx-auto" alt="logo">
+        </ng-container>
+        <ng-template #noLogo>
+            <div class="rounded-full w-20 h-20 md:w-28 md:h-28 bg-gray-500 flex items-center justify-center">
+                <ng-container *ngTemplateOutlet="chooseLogoModal"></ng-container>
+            </div>
+        </ng-template>
+        <div class="flex flex-col justify-between p-2">
+            <label>Label organo rappresentanza</label>
+            <input
+                type="text"
+                placeholder="Nome candidato/a"
+                class="input w-full bg-transparent max-w-xs outline-none focus:outline-none rounded-none border-t-0 border-x-0 border-b-2 border-b-black md:text-xl"
+                [readonly]="!isActive"
+            />
+        </div>
+    </div>
+</div>
+
+<ng-template #chooseLogoModal>
+    <app-modal
+        (selectedLogoEvent$)="bindSelectedLogo($event)"
+        [selectedLogo]="selectedLogo"
+        [mode]="selectedLogo ? 'edit' : 'create'"
+    ></app-modal>
+</ng-template>

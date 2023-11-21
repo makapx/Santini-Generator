@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
+  applications = [
+    'senatoAccademico',
+    'consiglioAmministrazione',
+    'nucleoValutazione',
+    'comitatoSport',
+    'consiglioAmministrazioneErsu',
+    'consiglioDipartimento',
+    'consiglioCdl',
+    'scuolaMedicina',
+  ];
 
 }
