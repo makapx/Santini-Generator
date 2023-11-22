@@ -1,7 +1,7 @@
 # Santini-Generator
 Generatore di santini per le elezioni politiche.
 
-#Demo
+# Demo
 
 [Live Demo](https://unict-dmi.github.io/Santini-Generator/)
 
@@ -19,3 +19,5 @@ Generatore di santini per le elezioni politiche.
 ```bash
 $ docker run --name santini-gen -p 4200:4200 santini-gen
 ```
+
+4. Go to http://localhost:4200
