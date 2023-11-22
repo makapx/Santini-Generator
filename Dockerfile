@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 WORKDIR /santini-gen/
 
@@ -12,4 +12,4 @@ RUN npm run build --prod
 
 EXPOSE 4200
 
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
