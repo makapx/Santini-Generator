@@ -1,13 +1,3 @@
-*.dist
-*.git
-node_modules
-Dockerfile
-.github
-.vscode
-.gitignore
-LICENSE
-readme.md
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -124,17 +114,12 @@ dmypy.json
 .pyre/
 
 # Custom
-config/token.conf
-logs/debugDrive.txt
-logs/errors.txt
-logs/logs.txt
-logs/chatid.txt
-classes/*.pyc
-config/drive_credentials.json
-config/settings.yaml
-data/DMI_DB.db
-module/*.pyc
-pydrive
-pydrive/*
 .vscode
-data/json/subjs.json
+*.dist
+*.git
+node_modules
+Dockerfile
+.github
+.gitignore
+LICENSE
+readme.md
