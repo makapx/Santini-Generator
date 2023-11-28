@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+
+  production_service:
+    build: .
+    ports:
+      - "80:80"
+
+  development_service:
+    build:
+      image: node:alpine
+    volumes:
+      - .:/santini-gen
+    ports:
+      - "80:80"
+
+    command: sh -c "cd /santini-gen && npm install && npm start"  
+
+  
