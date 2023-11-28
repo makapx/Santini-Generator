@@ -2,14 +2,13 @@ version: '3.9'
 
 services:
 
-  production_service:
+  production-service:
     build: .
     ports:
       - "80:80"
 
-  development_service:
-    build:
-      image: node:alpine
+  development-service:
+    image: node:alpine
     volumes:
       - .:/santini-gen
     ports:
