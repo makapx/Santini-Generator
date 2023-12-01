@@ -5,22 +5,25 @@ Generatore di santini per le elezioni politiche.
 
 [Live Demo](https://unict-dmi.github.io/Santini-Generator/)
 
-## Running with Docker
+## Running with Docker and docker-compose
 
 ### Building and running locally
 
 1. Clone the repository:
-2. Build the image:
+2. Go to project folder:
     ```bash
         $ cd Santini-Generator
-        $ docker build -t santini-gen .
     ```
-3. Run:
+3. For production environment run:
     ```bash
-    $ docker run --name santini-gen -p 80:80 santini-gen
+        $ ./start.sh
+    ```
+4. For development environment run:
+    ```bash
+    $ ./start.sh dev
     ```
 
-4. Go to: ```http://localhost```
+5. Go to: ```http://localhost```
 
 ## Using Docker Compose
 
