@@ -14,6 +14,6 @@ services:
     ports:
       - "80:80"
 
-    command: sh -c "cd /santini-gen && npm install && npm start"  
+    command: sh -c "cd /santini-gen && npm ci && npm start"  
 
   
