@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+
+/**
+ * Footer component.
+ */
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -9,6 +13,7 @@ export class FooterComponent {
     { name: 'Helias', url: 'https://github.com/Helias' },
     { name: 'makapx', url: 'https://github.com/makapx' },
     { name: 'infra-blue', url: 'https://github.com/infra-blue' },
+    { name: 'GiuseppeBnn', url: 'https://github.com/GiuseppeBnn' },
   ];
 
   technologies = [
