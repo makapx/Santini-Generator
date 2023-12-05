@@ -1,3 +1,5 @@
-<main class="p-10 min-h-screen">
-    <app-card></app-card>
+<main class="p-10 min-h-screen flex flex-col gap-4">
+    <ng-container *ngFor="let application of applicationCards">
+        <app-card [application]="application"></app-card>
+    </ng-container>
 </main>
