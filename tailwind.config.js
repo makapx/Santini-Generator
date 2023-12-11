@@ -17,6 +17,21 @@ module.exports = {
       }
     },
   },
+  purge: {
+    options: {
+      safelist: [
+        //TODO: handle with regex, use every class that ends with -applicationType
+        'bg-senatoAccademico',
+        'bg-consiglioAmministrazione',
+        'bg-nucleoValutazione',
+        'bg-comitatoSport',
+        'bg-consiglioAmministrazioneErsu',
+        'bg-consiglioDipartimento',
+        'bg-consiglioCdl',
+        'bg-scuolaMedicina',
+      ]
+    }
+  },
   daisyui: {
     themes: ["winter"],
   },

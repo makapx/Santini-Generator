@@ -2,29 +2,29 @@
  * Type of the application.
  */
 export enum ApplicationType {
-    'senatoAccademico' = 'Senato Accademico',
-    'consiglioAmministrazione' = 'Consiglio di Amministrazione',
-    'nucleoValutazione' = 'Nucleo di Valutazione',
-    'comitatoSport' = 'Comitato per lo Sport Universitario',
-    'consiglioAmministrazioneErsu' = 'Consiglio di Amministrazione ERSU',
-    'consiglioDipartimento' = 'Consiglio di Dipartimento',
-    'consiglioCdl' = 'Consiglio di Corso di Laurea',
-    'scuolaMedicina' = 'Scuola di Medicina',
+    'senatoAccademico' = 'senatoAccademico',
+    'consiglioAmministrazione' = 'consiglioAmministrazione',
+    'nucleoValutazione' = 'nucleoValutazione',
+    'comitatoSport' = 'comitatoSport',
+    'consiglioAmministrazioneErsu' = 'consiglioAmministrazioneErsu',
+    'consiglioDipartimento' = 'consiglioDipartimento',
+    'consiglioCdl' = 'consiglioCdl',
+    'scuolaMedicina' = 'scuolaMedicina',
 }
 
 /**
  * Color reference for the application type.
  * Used for labeling the application type in the card.
  */
-export enum ApplicationTypeColorReference {
-    'senatoAccademico' = 'gialla',
-    'consiglioAmministrazione' = 'bianca',
-    'nucleoValutazione' = 'rosa',
-    'comitatoSport' = 'verde',
-    'consiglioAmministrazioneErsu' = 'arancione',
-    'consiglioDipartimento' = 'azzurra',
-    'consiglioCdl' = 'obbliqua',
-    'scuolaMedicina' = 'bianca obbliqua',
+export enum ApplicationTypeLabel {
+    'senatoAccademico' = 'Senato Accademico (scheda gialla)',
+    'consiglioAmministrazione' = 'Consiglio di Amministrazione (scheda bianca)',
+    'nucleoValutazione' = 'Nucleo di Valutazione (scheda rosa)',
+    'comitatoSport' = 'Comitato per lo Sport Universitario (scheda verde)',
+    'consiglioAmministrazioneErsu' = 'Consiglio di Amministrazione ERSU (scheda arancione)',
+    'consiglioDipartimento' = 'Consiglio di Dipartimento (scheda azzurra)',
+    'consiglioCdl' = 'Consiglio di Corso di Laurea (scheda obbliqua)',
+    'scuolaMedicina' = 'Scuola di Medicina (scheda obbliqua bianca)',
 }
 
 /**
@@ -40,14 +40,14 @@ export enum ApplicationTypeColorReference {
  * @see ApplicationTypeColorReference
  */
 export interface ApplicationCard {
-    type: ApplicationType;
+    key: ApplicationType;
+    label: ApplicationTypeLabel;
     logo: string;
-    colorLabelReference: ApplicationTypeColorReference;
     options: any; // use for custom settings, such as less then 500 students for the cdl card or the square logo for the medicine school
     isActive: boolean;
 }
 
-
+// TODO: Automate object creation from images in assets/img
 export const Logos = [
     { name: 'acteaarcadia', label: 'Actea - Arcadia', path: 'assets/img/ACTEA  ‐  ARCADIA.jpg'},
     { name: 'acteacrediamoci', label: 'Actea - Crediamoci', path: 'assets/img/ACTEA - CREDIAMOCI.jpg'},
