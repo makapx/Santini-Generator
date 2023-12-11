@@ -7,7 +7,7 @@ services:
     ports:
       - "80:80"
 
-  development-service:
+  dev-service:
     image: node:alpine
     volumes:
       - .:/santini-gen
