@@ -7,13 +7,13 @@ services:
     ports:
       - "80:80"
 
-  development-service:
+  dev-service:
     image: node:alpine
     volumes:
       - .:/santini-gen
     ports:
       - "80:80"
 
-    command: sh -c "cd /santini-gen && npm install && npm start"  
+    command: sh -c "cd /santini-gen && npm ci && npm start"  
 
   
